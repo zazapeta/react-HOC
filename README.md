@@ -7,6 +7,8 @@ List of usefull react High Order Component :
 * Example preview : 
 > MyView.view.jsx
 ```javascript
+import animated from './simple-animated'
+
 function myView({animatedStyle}){
     return <div style={animatedStyle}> Hello world </div>
 }
@@ -21,6 +23,8 @@ export default animated({
 ``` 
 > MyView.container.jsx
 ```javascript
+import MyView from './MyView.view.jsx';
+
 function MyContainer(){
   return <MyView
             onLeave={() => console.log('animation is over')}
